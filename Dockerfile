@@ -39,6 +39,7 @@ RUN docker-php-ext-configure imap --with-imap-ssl --with-kerberos \
         && docker-php-ext-install gettext \
         && docker-php-ext-install intl \
         && docker-php-ext-install exif \
+        && docker-php-ext-install bcmath \
         && docker-php-ext-install mbstring
 
 
