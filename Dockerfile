@@ -1,4 +1,4 @@
-FROM php:7.1.14pm
+FROM php:7.1-fpm
 
 MAINTAINER AttractGroup
 
