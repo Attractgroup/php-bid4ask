@@ -8,7 +8,7 @@ RUN apt-get update && \
         libmemcached-dev \
         libz-dev \
         libjpeg-dev \
-        libpng12-dev \
+        libpng-dev \
         libfreetype6-dev \
         libssl-dev \
         libmcrypt-dev \
@@ -22,9 +22,6 @@ RUN apt-get update && \
         libssl-dev \
         libc-client2007e-dev \
         libkrb5-dev
-
-# Install the PHP mcrypt extention
-RUN docker-php-ext-install mcrypt
 
 # Install the PHP pdo_mysql extention
 RUN docker-php-ext-install pdo_mysql
