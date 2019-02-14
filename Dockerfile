@@ -8,7 +8,7 @@ RUN apt-get update && \
         libmemcached-dev \
         libz-dev \
         libjpeg-dev \
-        libpng12-dev \
+        libpng-dev \
         libfreetype6-dev \
         libssl-dev \
         libmcrypt-dev \
