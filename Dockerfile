@@ -20,6 +20,7 @@ RUN apt-get update && \
         libicu-dev \
         supervisor \
         libssl-dev \
+        libzip-dev \
         libc-client2007e-dev \
         libkrb5-dev
 
