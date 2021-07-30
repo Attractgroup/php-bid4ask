@@ -8,12 +8,12 @@ RUN apt-get update && \
         libmemcached-dev \
         libz-dev \
         libjpeg-dev \
-        libpng12-dev \
+        libpng-dev \
         libfreetype6-dev \
         libssl-dev \
         libmcrypt-dev \
         git \
-        mysql-client \
+        mariadb-client \
         libpq-dev \
         zlib1g-dev \
         libpng-dev \
@@ -24,7 +24,8 @@ RUN apt-get update && \
         libkrb5-dev
 
 # Install the PHP mcrypt extention
-RUN docker-php-ext-install mcrypt
+RUN pecl install mcrypt-1.0.3
+RUN docker-php-ext-enable mcrypt
 
 # Install the PHP pdo_mysql extention
 RUN docker-php-ext-install pdo_mysql
@@ -67,7 +68,7 @@ RUN docker-php-ext-install zip && \
 #####################################
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
+RUN composer self-update --1
 #####################################
 # Set Timezone
 #####################################
